@@ -18,6 +18,17 @@ img {
   height: auto;
 }
 
+::-webkit-scrollbar {
+  width: 0.815rem;
+}
+::-webkit-scrollbar-track {
+  background: #9e9ea0;
+}
+::-webkit-scrollbar-thumb {
+  background: #9b79ea;
+  border-radius: 2.2rem;
+}
+
 /*=== TODO: Variables ================================*/
 :root {
   --header-height: 4.5rem;
@@ -51,6 +62,7 @@ body {
   color: var(--text-color);
   background: var(--body-color);
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 .title {
@@ -361,6 +373,12 @@ nav.show div.icon-close {
   margin-bottom: 1.5rem;
   font-size: 5rem;
   color: var(--base-color);
+}
+
+.card img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
 }
 
 .card .title {
