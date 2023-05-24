@@ -637,11 +637,11 @@ footer .social a:hover {
     padding-right: 3rem;
   }
 
-  #services .cards i {
+  #services .cards img {
     transition: 0.3s cubic-bezier(0.1, -0.6, 0.2, 0);
   }
 
-  #services .cards i:hover {
+  #services .cards img:hover {
     transform: translateY(-9px);
   }
 
