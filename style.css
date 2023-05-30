@@ -355,6 +355,44 @@ nav.show div.icon-close {
   margin-right: 1.5rem;
 }
 
+/*
+	fixme <== === === === === service_card === === === === ==>
+*/
+
+.wrapper {
+  width: min(80rem, 100%);
+  display: grid;
+  margin-inline: auto;
+  padding-block: 2rem;
+}
+
+#service_card header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#service_card header h2 {
+  margin-bottom: 6rem;
+}
+
+#service_card .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+#service_card .card {
+  padding: 2.4rem;
+  text-align: left;
+
+  background: var(--color-white);
+}
+#service_card .card h3 {
+  margin-block: 1.6rem;
+}
+
 /*=== TODO: SERVICES ===*/
 .cards.grid {
   gap: 1.5rem;
@@ -551,6 +589,19 @@ footer .social a:hover {
 /* === TODO: MEDIA QUERIES === */
 /* extra large devices: +1200 > */
 @media (min-width: 1200px) {
+  /*? <== === === === === SERVICES === === === === ==> */
+  /* *<|=== Desktop SERVICES ===|>*/
+
+  #service_card .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+  #service_card .card {
+    width: 30%;
+    flex-grow: 1;
+  }
+
   /* reusable class */
   .container {
     max-width: 1120px;
@@ -618,7 +669,7 @@ footer .social a:hover {
 
   #home .text {
     order: 0;
-    max-width: 24rem;
+    /* max-width: 24rem; */
     text-align: left;
   }
 
@@ -630,7 +681,7 @@ footer .social a:hover {
 
   /* HACK: Services */
   .cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
   .card {
     padding-left: 3rem;
